@@ -1,5 +1,7 @@
 # 🏠Airbnb Listings Data Analysis
 
+![Airbnb Data Analysis](Logo_image/image-1536x1027.jpeg-1024x685.webp)
+
 ## 📊 Exploratory Data Analysis using Python, Pandas, NumPy, Matplotlib & Seaborn
 
 This project presents an **Exploratory Data Analysis (EDA)** of an Airbnb listings dataset. The analysis focuses on understanding Airbnb listing characteristics, pricing patterns, availability, reviews, room types, neighbourhood-level differences, and relationships between numerical variables.
