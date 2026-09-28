@@ -138,7 +138,7 @@ import seaborn as sns
 
 
 ________________________________________
-🔄 Project Workflow
+```🔄 Project Workflow
 The project follows the following workflow:
                 ┌─────────────────────┐
                 │   Import Libraries  │
@@ -179,126 +179,20 @@ The project follows the following workflow:
                 ┌─────────────────────┐
                 │   Key Insights      │
                 └─────────────────────┘
-________________________________________
-🔍 1. Data Import
-The dataset was imported using Pandas:
-```data = pd.read_csv("datasets.csv")
 ```
-The initial dataset was inspected using:
-```data.head()
-```
-This allowed the structure and sample records of the dataset to be reviewed before beginning the analysis.
-________________________________________
-🔎 2. Data Exploration
-Several Pandas functions were used to understand the dataset:
-View the first records
-data.head()
-Check dataset dimensions
-data.shape
-The initial shape was:
-(20770, 22)
-Inspect data types and missing values
-data.info()
-The dataset initially contained:
-•	20,770 records
-•	22 columns
-•	10 float64 columns
-•	2 int64 columns
-•	10 string columns
-________________________________________
-📈 3. Descriptive Statistics
-The describe() function was used to obtain descriptive statistics for numerical variables:
-data.describe()
-Important numerical variables included:
-•	price
-•	minimum_nights
-•	number_of_reviews
-•	reviews_per_month
-•	calculated_host_listings_count
-•	availability_365
-•	number_of_reviews_ltm
-•	beds
-Selected statistics
-Variable	Mean	Median	Maximum
-Price	187.71	125.00	100,000
-Minimum Nights	28.56	30.00	1,250
-Number of Reviews	42.61	14.00	1,865
-Reviews per Month	1.26	0.65	75.49
-Availability (365)	206.07	215.00	365
-Beds	1.72	1.00	42
-The price variable shows a substantial difference between the mean and median, indicating a strongly right-skewed distribution.
-________________________________________
-🧹 4. Data Cleaning
-Data cleaning was performed before conducting the main analysis.
-4.1 Missing Value Detection
-Missing values were identified using:
-data.isnull().sum()
-Some variables contained missing values, including:
-•	neighbourhood
-•	latitude
-•	longitude
-•	room_type
-•	price
-•	minimum_nights
-•	number_of_reviews
-•	last_review
-•	reviews_per_month
-•	availability_365
-________________________________________
-4.2 Handling Missing Values
-Rows containing missing values were removed using:
-data.dropna(inplace=True)
-The number of records decreased from:
-20,770
-to:
-20,736
-________________________________________
-♻️ 5. Duplicate Record Detection
-Duplicate records were identified using:
-data.duplicated().sum()
-The dataset contained:
-12 duplicate records
-The duplicate records were removed using:
-data.drop_duplicates(inplace=True)
-After removing duplicates:
-data.duplicated().sum()
-returned:
-0
-The cleaned dataset contained:
-20,724 records
-________________________________________
-💡 6. Key Insights
-Based on the exploratory analysis, several observations were identified.
-1. Price Distribution
-Airbnb prices are strongly right-skewed, with most observations concentrated at lower-to-moderate price levels and a smaller number of high-price listings.
-2. Location Matters
-Average listing prices differ considerably across neighbourhood groups.
-Manhattan recorded the highest average price among the five neighbourhood groups analyzed.
-3. Price per Bed
-Manhattan also recorded the highest average price per bed.
-4. Room Type
-Listing prices vary according to both neighbourhood group and room type.
-5. Availability
-Airbnb listings show substantial variation in annual availability.
-6. Beds and Price
-The number of beds has the strongest positive correlation with price among the selected numerical variables.
-7. Reviews and Price
-The number of reviews has only a very weak correlation with price in the analyzed dataset.
-8. Geographical Distribution
-Airbnb listings are geographically concentrated across different locations, with room types distributed throughout the analyzed area.
 ________________________________________
 📌 Summary of Findings
-Analysis Area	Main Finding
-Dataset Size	20,770 initial records
-Cleaned Dataset	20,724 records
-Duplicate Records	12 removed
-Price Distribution	Strong right skew
-Highest Average Price	Manhattan
-Lowest Average Price	Bronx
-Highest Price per Bed	Manhattan
-Strongest Price Correlation	Beds (0.415)
-Price vs Reviews	Very weak correlation
-Price vs Availability	Very weak correlation
+•	Analysis Area	Main Finding
+•	Dataset Size	20,770 initial records
+•	Cleaned Dataset	20,724 records
+•	Duplicate Records	12 removed
+•	Price Distribution	Strong right skew
+•	Highest Average Price	Manhattan
+•	Lowest Average Price	Bronx
+•	Highest Price per Bed	Manhattan
+•	Strongest Price Correlation	Beds (0.415)
+•	Price vs Reviews	Very weak correlation
+•	Price vs Availability	Very weak correlation
 ________________________________________
 🧰 Skills Demonstrated
 This project demonstrates practical skills in:
@@ -340,7 +234,7 @@ Matplotlib
 ________________________________________
 📁 Project Structure
 A recommended GitHub repository structure is:
-Airbnb-Data-Analysis/
+```Airbnb-Data-Analysis/
 │
 ├── 📓 Airbnb_Data_Analysis.ipynb
 │
@@ -359,10 +253,12 @@ Airbnb-Data-Analysis/
 ├── 📄 Airbnb_Data_Analysis_Report.pdf
 │
 └── README.md
+```
 The exact filenames can be changed according to the files included in the repository.
 ________________________________________
 ▶️ How to Run the Project
-1. Clone the Repository
+
+```1. Clone the Repository
 git clone YOUR_GITHUB_REPOSITORY_URL
 2. Navigate to the Project Directory
 cd Airbnb-Data-Analysis
@@ -375,9 +271,10 @@ jupyter lab
 5. Open
 Airbnb_Data_Analysis.ipynb
 Run the notebook cells sequentially to reproduce the analysis.
+```
 ________________________________________
 📷 Project Visualizations
-Price Distribution
+```Price Distribution
 The price distribution demonstrates a strongly right-skewed pattern, with a large concentration of listings at lower price levels and a long tail of expensive listings.
 Availability Distribution
 The availability analysis shows considerable variation in the number of days listings are available throughout the year.
@@ -389,10 +286,12 @@ Geographical Distribution
 Latitude and longitude were used to visualize the geographical distribution of Airbnb listings and room types.
 Correlation Heatmap
 The correlation heatmap provides an overview of relationships among price, beds, reviews, availability, minimum nights, latitude, and longitude.
+```
 ________________________________________
 📚 Analysis Approach
 The project follows a structured EDA methodology:
 
+```
 1. Import Python Libraries
 
           ↓
@@ -450,6 +349,7 @@ The project follows a structured EDA methodology:
           ↓
 
 15. Generate Insights
+```
 ________________________________________
 🚀 Future Improvements
 The current project focuses primarily on exploratory data analysis. The project can be extended in several directions.
