@@ -1,4 +1,4 @@
-🏠 Airbnb Listings Data Analysis
+# 🏠 Airbnb Listings Data Analysis
 
 ## 📊 Exploratory Data Analysis using Python, Pandas, NumPy, Matplotlib & Seaborn
 
@@ -351,47 +351,50 @@ The project follows a structured EDA methodology:
 15. Generate Insights
 ```
 ________________________________________
-🚀 Future Improvements
+## 🚀 Future Improvements
 The current project focuses primarily on exploratory data analysis. The project can be extended in several directions.
 Possible future work:
-•	Build an interactive dashboard using Power BI
-•	Perform advanced statistical analysis
-•	Apply feature engineering
-•	Analyze neighbourhood-level trends in greater detail
-•	Perform time-series analysis using review dates
-•	Develop a machine learning model for price prediction
-•	Compare different regression algorithms
-•	Perform model evaluation using RMSE, MAE and R²
-•	Develop an interactive web-based visualization dashboard
+-	Build an interactive dashboard using Power BI
+-	Perform advanced statistical analysis
+-	Apply feature engineering
+-	Analyze neighbourhood-level trends in greater detail
+-	Perform time-series analysis using review dates
+-	Develop a machine learning model for price prediction
+-	Compare different regression algorithms
+-	Perform model evaluation using RMSE, MAE and R²
+-	Develop an interactive web-based visualization dashboard
 ________________________________________
-🎓 Learning Outcomes
+## 📚 Learning Outcomes
+
 Through this project, the following practical data analysis concepts were applied:
-•	Dataset exploration
-•	Data cleaning
-•	Missing value handling
-•	Duplicate detection
-•	Data type conversion
-•	Descriptive statistics
-•	Outlier identification
-•	Univariate analysis
-•	Bivariate analysis
-•	Multivariate analysis
-•	GroupBy analysis
-•	Feature engineering
-•	Data visualization
-•	Correlation analysis
-•	Insight generation
+
+- Dataset exploration
+- Data cleaning
+- Missing value handling
+- Duplicate detection
+- Data type conversion
+- Descriptive statistics
+- Outlier identification
+- Univariate analysis
+- Bivariate analysis
+- Multivariate analysis
+- GroupBy analysis
+- Feature engineering
+- Data visualization
+- Correlation analysis
+- Insight generation
 ________________________________________
-👨‍💻 Author
-MD Nur Hossain Joy
-Data Analyst | Python | SQL | Power BI | Excel
+## 👨‍💻 Author
+
+### MD Nur Hossain Joy
+### Data Analyst | Python | SQL | Power BI | Excel
 Technical Interests
-•	Data Analytics
-•	Data Visualization
-•	Python
-•	SQL
-•	Business Intelligence
-•	Machine Learning
+-	Data Analytics
+-	Data Visualization
+-	Python
+-	SQL
+-	Business Intelligence
+-	Machine Learning
 ________________________________________
 ⭐ If You Find This Project Useful
 If you find this project useful or interesting, feel free to:
