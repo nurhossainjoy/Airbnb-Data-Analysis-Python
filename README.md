@@ -129,7 +129,7 @@ The project was developed using Python and the following libraries:
 
 ### Libraries Imported
 
-```python
+python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
