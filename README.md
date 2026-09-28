@@ -1,4 +1,4 @@
-# 🏠 Airbnb Listings Data Analysis
+<img width="198" height="88" alt="image" src="https://github.com/user-attachments/assets/100950eb-9c79-49f8-81b6-dbd2166774a2" /><img width="198" height="88" alt="image" src="https://github.com/user-attachments/assets/abbeb71f-4cfe-437c-ba0e-5fc6ccd3639a" /># 🏠 Airbnb Listings Data Analysis
 
 ## 📊 Exploratory Data Analysis using Python, Pandas, NumPy, Matplotlib & Seaborn
 
@@ -129,11 +129,14 @@ The project was developed using Python and the following libraries:
 
 ### Libraries Imported
 
-python
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+```
+
+
 ________________________________________
 🔄 Project Workflow
 The project follows the following workflow:
@@ -179,9 +182,11 @@ The project follows the following workflow:
 ________________________________________
 🔍 1. Data Import
 The dataset was imported using Pandas:
-data = pd.read_csv("datasets.csv")
+```data = pd.read_csv("datasets.csv")
+```
 The initial dataset was inspected using:
-data.head()
+```data.head()
+```
 This allowed the structure and sample records of the dataset to be reviewed before beginning the analysis.
 ________________________________________
 🔎 2. Data Exploration
@@ -262,227 +267,7 @@ returned:
 The cleaned dataset contained:
 20,724 records
 ________________________________________
-🔧 6. Data Type Preparation
-The id and host_id variables were converted into object-type variables because they function as identifiers rather than numerical measures.
-ID conversion
-data['id'] = data['id'].astype(object)
-Host ID conversion
-data['host_id'] = data['host_id'].astype(object)
-This improves the semantic interpretation of these variables during analysis.
-________________________________________
-📊 7. Exploratory Data Analysis
-The EDA section focuses on understanding individual variables and relationships between variables.
-The analysis includes:
-•	Univariate Analysis
-•	Bivariate Analysis
-•	Multivariate Analysis
-•	Geographical Analysis
-•	Correlation Analysis
-________________________________________
-💰 8. Price Analysis
-Price was selected as one of the primary variables for analysis.
-df['price']
-The dataset shows considerable variation in Airbnb listing prices.
-The descriptive statistics show:
-•	Mean price: approximately $187.71
-•	Median price: approximately $125
-•	Maximum recorded price: $100,000
-The large difference between the mean and median indicates the presence of extreme high-price observations.
-________________________________________
-🚨 9. Price Outlier Analysis
-A boxplot was used to identify extreme values:
-sns.boxplot(data=data, x='price')
-Because extremely high values made the main distribution difficult to interpret, a filtered analysis dataset was created:
-df = data[data['price'] < 1500]
-This filtered dataset was then used for subsequent price visualizations.
-Note: The filtering was used for visualization and exploratory analysis. It does not imply that all observations above $1,500 are invalid.
-________________________________________
-📈 10. Price Distribution
-A histogram was created to understand the distribution of Airbnb listing prices:
-plt.figure(figsize=(8,7))
-
-plt.title("Price Distribution")
-
-sns.histplot(
-    data=df,
-    x='price',
-    bins=100
-)
-
-plt.ylabel("Frequency")
-Key Observation
-The price distribution is strongly right-skewed, with most listings concentrated at relatively lower price levels and a long tail toward higher prices.
-This indicates that a relatively small number of expensive listings have a substantial influence on the overall price distribution.
-________________________________________
-📅 11. Availability Analysis
-The availability_365 variable represents the number of days a listing is available within a 365-day period.
-The distribution was visualized using:
-plt.figure(figsize=(8,7))
-
-plt.title("Availability 365 Distribution")
-
-sns.histplot(
-    data=df,
-    x='availability_365'
-)
-
-plt.ylabel("Frequency")
-Observation
-The distribution shows substantial variation in listing availability.
-There is noticeable concentration at both relatively low availability and very high availability levels.
-________________________________________
-📍 12. Average Price by Neighbourhood Group
-Average Airbnb price was calculated by neighbourhood group:
-df.groupby(
-    by='neighbourhood_group'
-)['price'].mean()
-Results
-Neighbourhood Group	Average Price
-Bronx	107.99
-Brooklyn	155.14
-Manhattan	204.15
-Queens	121.68
-Staten Island	118.78
-Key Finding
-Among the five neighbourhood groups analyzed, Manhattan has the highest average listing price, while the Bronx has the lowest average listing price in this dataset.
-________________________________________
-🛏️ 13. Price per Bed Analysis
-A new feature was created to calculate the price per bed:
-df['Price_per_beds'] = df['price'] / df['beds']
-This variable provides a simple measure of the average price associated with each bed.
-The average price per bed was then calculated by neighbourhood group:
-df.groupby(
-    by='neighbourhood_group'
-)['Price_per_beds'].mean()
-Results
-Neighbourhood Group	Average Price per Bed
-Bronx	74.71
-Brooklyn	99.79
-Manhattan	138.71
-Queens	76.34
-Staten Island	67.73
-Key Finding
-Manhattan has the highest average price per bed among the neighbourhood groups analyzed.
-________________________________________
-🏠 14. Room Type & Neighbourhood Analysis
-A grouped bar chart was used to examine how room type and neighbourhood group relate to listing price:
-sns.barplot(
-    data=df,
-    x='neighbourhood_group',
-    y='price',
-    hue='room_type'
-)
-This visualization allows comparison of:
-•	Neighbourhood groups
-•	Room types
-•	Average listing prices
-Room Types
-The analysis includes room categories such as:
-•	Private room
-•	Entire home/apt
-•	Hotel room
-•	Shared room
-The visualization shows that pricing patterns vary by both location and room type.
-________________________________________
-⭐ 15. Reviews vs Price
-A scatterplot was used to investigate the relationship between recent review activity and listing price:
-plt.title("Locality and review dependency")
-
-sns.scatterplot(
-    data=df,
-    x='number_of_reviews_ltm',
-    y='price',
-    hue='neighbourhood_group'
-)
-
-plt.show()
-Observation
-The scatterplot shows considerable variation in prices across different levels of review counts.
-There is no strong linear relationship between the number of reviews in the last twelve months and price based on the correlation analysis.
-________________________________________
-🗺️ 16. Geographical Distribution of Airbnb Listings
-The latitude and longitude variables were used to visualize the geographical distribution of Airbnb listings.
-plt.figure(figsize=(10,8))
-
-plt.title("Geographical Distribution of Airbnb Listing")
-
-sns.scatterplot(
-    data=df,
-    x='longitude',
-    y='latitude',
-    hue='room_type'
-)
-
-plt.show()
-This visualization provides a geographical view of where different room types are located across the analyzed area.
-________________________________________
-🔗 17. Pairplot Analysis
-A pairplot was used to examine relationships among:
-•	price
-•	minimum_nights
-•	number_of_reviews
-•	availability_365
-with room type used as the hue:
-sns.pairplot(
-    data=df,
-    vars=[
-        'price',
-        'minimum_nights',
-        'number_of_reviews',
-        'availability_365'
-    ],
-    hue='room_type'
-)
-The pairplot provides a multivariate overview of distributions and relationships among the selected numerical variables.
-________________________________________
-📐 18. Correlation Analysis
-Correlation analysis was performed on selected numerical variables:
-corr = df[
-    [
-        'latitude',
-        'longitude',
-        'price',
-        'minimum_nights',
-        'number_of_reviews',
-        'availability_365',
-        'beds'
-    ]
-].corr()
-A correlation heatmap was then created:
-plt.figure(figsize=(8,7))
-
-sns.heatmap(
-    data=corr,
-    annot=True
-)
-________________________________________
-📊 19. Correlation Results
-Some notable correlations from the analysis include:
-Variable Pair	Correlation
-Price ↔ Beds	0.415
-Price ↔ Longitude	-0.194
-Price ↔ Number of Reviews	-0.044
-Price ↔ Availability	0.048
-Price ↔ Minimum Nights	-0.045
-Interpretation
-Price & Beds
-The correlation between price and number of beds is approximately:
-0.415
-This represents a moderate positive relationship within the analyzed dataset.
-Price & Longitude
-The correlation is approximately:
--0.194
-indicating a weak negative relationship.
-Price & Reviews
-The correlation is approximately:
--0.044
-which indicates a very weak relationship.
-Price & Availability
-The correlation is approximately:
-0.048
-which also indicates a very weak relationship.
-________________________________________
-💡 20. Key Insights
+💡 6. Key Insights
 Based on the exploratory analysis, several observations were identified.
 1. Price Distribution
 Airbnb prices are strongly right-skewed, with most observations concentrated at lower-to-moderate price levels and a smaller number of high-price listings.
@@ -713,4 +498,4 @@ If you find this project useful or interesting, feel free to:
 ⭐ Star the repository
 🍴 Fork the repository
 💬 Share your feedback
-🔗 Connect with me on LinkedIn
+🔗 Connect with me on LinkedIn: https://www.linkedin.com/in/md-nur-hossain-joy-0b0bb9190/
