@@ -181,58 +181,58 @@ The project follows the following workflow:
                 └─────────────────────┘
 ```
 ________________________________________
-📌 Summary of Findings
-•	Analysis Area	Main Finding
-•	Dataset Size	20,770 initial records
-•	Cleaned Dataset	20,724 records
-•	Duplicate Records	12 removed
-•	Price Distribution	Strong right skew
-•	Highest Average Price	Manhattan
-•	Lowest Average Price	Bronx
-•	Highest Price per Bed	Manhattan
-•	Strongest Price Correlation	Beds (0.415)
-•	Price vs Reviews	Very weak correlation
-•	Price vs Availability	Very weak correlation
+##📌 Summary of Findings
+-	Analysis Area	Main Finding
+-	Dataset Size	20,770 initial records
+-	Cleaned Dataset	20,724 records
+-	Duplicate Records	12 removed
+-	Price Distribution	Strong right skew
+-	Highest Average Price	Manhattan
+-	Lowest Average Price	Bronx
+-	Highest Price per Bed	Manhattan
+-	Strongest Price Correlation	Beds (0.415)
+-	Price vs Reviews	Very weak correlation
+-	Price vs Availability	Very weak correlation
 ________________________________________
-🧰 Skills Demonstrated
+## 🧰 Skills Demonstrated
 This project demonstrates practical skills in:
 Python
-•	Variables
-•	Functions
-•	Data structures
-•	Basic data manipulation
+-	Variables
+-	Functions
+-	Data structures
+-	Basic data manipulation
 Pandas
-•	Reading CSV files
-•	DataFrame exploration
-•	head()
-•	shape
-•	info()
-•	describe()
-•	Missing value detection
-•	dropna()
-•	Duplicate detection
-•	drop_duplicates()
-•	groupby()
-•	Creating calculated columns
-•	Correlation analysis
+-	Reading CSV files
+-	DataFrame exploration
+-	head()
+-	shape
+-	info()
+-	describe()
+-	Missing value detection
+-	dropna()
+-	Duplicate detection
+-	drop_duplicates()
+-	groupby()
+-	Creating calculated columns
+-	Correlation analysis
 NumPy
-•	Numerical operations
-•	Supporting data analysis workflows
+-	Numerical operations
+-	Supporting data analysis workflows
 Seaborn
-•	Boxplots
-•	Histograms
-•	Barplots
-•	Scatterplots
-•	Pairplots
-•	Heatmaps
+-	Boxplots
+-	Histograms
+-	Barplots
+-	Scatterplots
+-	Pairplots
+-	Heatmaps
 Matplotlib
-•	Figure sizing
-•	Titles
-•	Axis labels
-•	Plot customization
-•	Visualization presentation
+-	Figure sizing
+-	Titles
+-	Axis labels
+-	Plot customization
+-	Visualization presentation
 ________________________________________
-📁 Project Structure
+## 📁 Project Structure
 A recommended GitHub repository structure is:
 ```Airbnb-Data-Analysis/
 │
@@ -256,7 +256,7 @@ A recommended GitHub repository structure is:
 ```
 The exact filenames can be changed according to the files included in the repository.
 ________________________________________
-▶️ How to Run the Project
+## ▶️ How to Run the Project
 
 ```1. Clone the Repository
 git clone YOUR_GITHUB_REPOSITORY_URL
@@ -273,19 +273,19 @@ Airbnb_Data_Analysis.ipynb
 Run the notebook cells sequentially to reproduce the analysis.
 ```
 ________________________________________
-📷 Project Visualizations
+## 📷 Project Visualizations
 ```Price Distribution
-The price distribution demonstrates a strongly right-skewed pattern, with a large concentration of listings at lower price levels and a long tail of expensive listings.
-Availability Distribution
-The availability analysis shows considerable variation in the number of days listings are available throughout the year.
-Neighbourhood Pricing
-Average listing prices vary significantly across neighbourhood groups, with Manhattan showing the highest average price.
-Price per Bed
-Price-per-bed analysis provides an additional perspective for comparing accommodation costs across neighbourhood groups.
-Geographical Distribution
-Latitude and longitude were used to visualize the geographical distribution of Airbnb listings and room types.
-Correlation Heatmap
-The correlation heatmap provides an overview of relationships among price, beds, reviews, availability, minimum nights, latitude, and longitude.
+-The price distribution demonstrates a strongly right-skewed pattern, with a large concentration of listings at lower price levels and a long tail of expensive listings.
+-Availability Distribution
+-The availability analysis shows considerable variation in the number of days listings are available throughout the year.
+-Neighbourhood Pricing
+-Average listing prices vary significantly across neighbourhood groups, with Manhattan showing the highest average price.
+-Price per Bed
+-Price-per-bed analysis provides an additional perspective for comparing accommodation costs across neighbourhood groups.
+-Geographical Distribution
+-Latitude and longitude were used to visualize the geographical distribution of Airbnb listings and room types.
+-Correlation Heatmap
+-The correlation heatmap provides an overview of relationships among price, beds, reviews, availability, minimum nights, latitude, and longitude.
 ```
 ________________________________________
 📚 Analysis Approach
