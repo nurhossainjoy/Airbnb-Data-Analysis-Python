@@ -1,4 +1,4 @@
-# 🏠 Airbnb Listings Data Analysis
+# 🏠Airbnb Listings Data Analysis
 
 ## 📊 Exploratory Data Analysis using Python, Pandas, NumPy, Matplotlib & Seaborn
 
