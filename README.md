@@ -1,4 +1,4 @@
-<img width="198" height="88" alt="image" src="https://github.com/user-attachments/assets/100950eb-9c79-49f8-81b6-dbd2166774a2" /><img width="198" height="88" alt="image" src="https://github.com/user-attachments/assets/abbeb71f-4cfe-437c-ba0e-5fc6ccd3639a" /># 🏠 Airbnb Listings Data Analysis
+🏠 Airbnb Listings Data Analysis
 
 ## 📊 Exploratory Data Analysis using Python, Pandas, NumPy, Matplotlib & Seaborn
 
