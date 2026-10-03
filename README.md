@@ -1,4 +1,4 @@
-# 🏠Airbnb Listings Data Analysis
+# 🏠Airbnb Insights: Listing, Pricing & Location Analytics
 
 ![Airbnb Data Analysis](Logo_image/image-1536x1027.jpeg-1024x685.webp)
 
